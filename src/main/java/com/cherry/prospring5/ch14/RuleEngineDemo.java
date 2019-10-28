@@ -11,7 +11,8 @@ public class RuleEngineDemo {
 
     public static void main(String... args) throws Exception {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("classpath:spring/app-context.xml");
+//        ctx.load("classpath:spring/app-context.xml");
+        ctx.load("classpath:spring/app-context-inline.xml");
         ctx.refresh();
         SingerService singerService =
                 ctx.getBean("singerService", SingerService.class);

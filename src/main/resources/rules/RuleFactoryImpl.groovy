@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component
 @Component
 class RuleFactoryImpl implements RuleFactory {
     Closure age = { birthDate ->
-        print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>" + Years.yearsBetween(birthDate, new DateTime()).getYears() + ">>>>>>>>>>>>>>>\n"
         return Years.yearsBetween(birthDate, new DateTime()).getYears()
     }
 
